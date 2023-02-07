@@ -10,7 +10,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Objects;
 
-public class HelloApplication extends Application {
+public class Main extends Application {
 
     private final Image icon = new Image("C:\\Users\\PC\\Documents\\JAVA-TEST\\LMS\\src\\main\\resources\\assets\\icon.png");
     private final String cssStyling = Objects.requireNonNull(getClass().getResource("main.css")).toExternalForm();
@@ -25,7 +25,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         initialize(stage);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(cssStyling);
         stage.setScene(scene);

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="com.example.lms.FakeMain" />
+  <configuration default="false" name="StartApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="com.example.lms.StartApplication" />
     <module name="LMS" />
     <extension name="coverage">
       <pattern>

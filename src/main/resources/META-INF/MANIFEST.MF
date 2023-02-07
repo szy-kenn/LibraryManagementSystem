@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: com.example.lms.FakeMain
+Main-Class: com.example.lms.StartApplication
 Class-Path: ikonli-core-12.3.1.jar javafx-fxml-19-win.jar ikonli-javafx-
  12.3.1.jar javafx-base-19-win.jar javafx-controls-19.jar javafx-control
  s-19-win.jar javafx-fxml-19.jar javafx-swt.jar javafx.base.jar javafx.c
