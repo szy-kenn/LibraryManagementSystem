@@ -1,0 +1,58 @@
+
+.root {
+    -fx-background-color: #2C3639;
+}
+
+#bgImage {
+    -fx-blend-mode: multiply;
+    -fx-opacity: 0.85;
+}
+#loginRect {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 15, 0.15, 0, 0);
+}
+#welcomeRect {
+    /*-fx-effect: innershadow(gaussian, rgba(0, 0, 0, 1), 5, 0.15, 0, 0);*/
+}
+
+#usernameField {
+    -fx-text-box-border: unset;
+    -fx-text-fill: "white";
+    -fx-prompt-text-fill: #b2b2b2;
+    -fx-font-size: 14px;
+    -fx-font-family: 'JetBrains Mono';
+    -fx-font-weight: bold;
+}
+#usernameField:focused {
+    -fx-focus-color: "unset";
+    -fx-prompt-text-fill: transparent;
+}
+
+#passwordField {
+    -fx-text-box-border: unset;
+    -fx-focus-color: unset;
+    -fx-font-size: 14px;
+    -fx-text-fill: "white";
+    -fx-prompt-text-fill: #b2b2b2;
+    -fx-font-family: 'JetBrains Mono';
+    -fx-font-weight: bold;
+}
+
+#passwordField:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+#logIntoText {
+    -fx-font-size: 26px;
+}
+#logIntoText1 {
+    -fx-font-size: 26px;
+}
+#createAccount {
+    -fx-font-family: 'JetBrains Mono NL';
+    -fx-font-size: 10px;
+    -fx-background: none;
+}
+
+#welcomeText {
+    /*-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 15, 0.15, 0, 0);*/
+}

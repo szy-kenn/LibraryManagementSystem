@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Main-Class: com.example.lms.FakeMain
+Class-Path: ikonli-core-12.3.1.jar javafx-fxml-19-win.jar ikonli-javafx-
+ 12.3.1.jar javafx-base-19-win.jar javafx-controls-19.jar javafx-control
+ s-19-win.jar javafx-fxml-19.jar javafx-swt.jar javafx.base.jar javafx.c
+ ontrols.jar javafx.fxml.jar javafx.graphics.jar javafx.media.jar javafx
+ .swing.jar javafx.web.jar ikonli-boxicons-pack-12.2.0.jar ikonli-core-1
+ 2.2.0.jar javafx-graphics-19-win.jar javafx-graphics-19.jar javafx-base
+ -19.jar
+
