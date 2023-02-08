@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="searchBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.HomeTopBar">
+   <children>
+      <TextField layoutY="10.0" opacity="0.75" prefHeight="26.0" prefWidth="256.0" promptText="Search a book here..." style="-fx-background-color: #3f4e4f; -fx-background-radius: 0;" />
+   </children>
+</AnchorPane>

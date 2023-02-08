@@ -2,8 +2,10 @@ package com.example.lms;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -25,8 +27,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         initialize(stage);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("base-stage.fxml")));
+        AnchorPane mainPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main-view.fxml")));
+        ((AnchorPane) root).getChildren().add(mainPane);
+        Scene scene = new Scene(root);
         scene.getStylesheets().add(cssStyling);
         stage.setScene(scene);
         stage.show();

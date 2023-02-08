@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -17,15 +15,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.Controller">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.MainController">
 <children>
-    <ImageView fx:id="bgImage" fitHeight="720.0" fitWidth="1280.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@../../../assets/lib-bg.png" />
-        </image>
-    </ImageView>
-    <Rectangle fx:id="loginRect" arcWidth="5.0" fill="#2c3639" height="357.0" layoutX="354.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="573.0" />
-    <Rectangle fx:id="welcomeRect" arcWidth="5.0" height="357.0" layoutX="354.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="286.0">
+    <Rectangle fx:id="loginRect" arcWidth="5.0" fill="#2c3639" height="364.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="581.0" />
+    <Rectangle fx:id="welcomeRect" arcWidth="5.0" height="364.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="286.0">
         <fill>
             <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.4834123222748815">
                 <stops>
@@ -48,61 +41,46 @@
             </LinearGradient>
         </fill>
     </Rectangle>
-    <ImageView fitHeight="150.0" fitWidth="286.0" layoutX="354.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fitHeight="150.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../assets/rect-part.png" />
         </image>
     </ImageView>
-    <TextField fx:id="usernameField" layoutX="685.0" layoutY="347.0" prefHeight="25.0" prefWidth="203.0" promptText="USERNAME" />
-    <PasswordField fx:id="passwordField" layoutX="684.0" layoutY="402.0" prefHeight="25.0" prefWidth="203.0" promptText="PASSWORD" />
-    <StackPane layoutX="744.0" layoutY="411.0" prefHeight="150.0" prefWidth="200.0">
-        <children>
-            <ImageView fitHeight="42.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@../../../assets/login_button.png" />
-                </image>
-            </ImageView>
-            <Button fx:id="loginButton" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="96.0" text="Button">
-                <cursor>
-                    <Cursor fx:constant="HAND" />
-                </cursor>
-            </Button>
-        </children>
-    </StackPane>
-    <Line endX="111.0" layoutX="778.0" layoutY="375.0" startX="-92.0" stroke="#dcd7c9" />
-    <Line endX="111.0" layoutX="778.0" layoutY="430.0" startX="-92.0" stroke="#dcd7c9" />
-    <Text fx:id="logIntoText" fill="WHITE" layoutX="679.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG INTO" wrappingWidth="246.0">
+    <TextField fx:id="usernameField" layoutX="329.0" layoutY="164.0" prefHeight="25.0" prefWidth="211.0" promptText="USERNAME" />
+    <PasswordField fx:id="passwordField" layoutX="328.0" layoutY="219.0" prefHeight="25.0" prefWidth="211.0" promptText="PASSWORD" />
+    <Line endX="111.0" layoutX="424.0" layoutY="249.0" startX="-92.0" stroke="#dcd7c9" />
+    <Text fx:id="logIntoText" fill="WHITE" layoutX="325.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG INTO" wrappingWidth="246.0">
         <font>
             <Font name="JetBrains Mono NL ExtraBold" size="12.0" />
         </font>
     </Text>
-    <Text fx:id="logIntoText1" fill="WHITE" layoutX="679.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR ACCOUNT" wrappingWidth="246.0">
+    <Text fx:id="logIntoText1" fill="WHITE" layoutX="325.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR ACCOUNT" wrappingWidth="246.0">
         <font>
             <Font name="JetBrains Mono NL ExtraBold" size="12.0" />
         </font>
     </Text>
-    <Text fx:id="createAccount" fill="WHITE" layoutX="681.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or Create an Account now!" wrappingWidth="246.0">
+    <Text fx:id="createAccount" fill="WHITE" layoutX="327.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or Create an Account now!" wrappingWidth="246.0">
         <font>
             <Font name="JetBrains Mono NL ExtraBold" size="12.0" />
         </font>
     </Text>
-    <Button layoutX="701.0" layoutY="292.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="127.0" text="Button" visible="false" />
-    <ImageView fitHeight="150.0" fitWidth="55.0" layoutX="863.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+    <Button layoutX="347.0" layoutY="109.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="127.0" text="Button" visible="false" />
+    <ImageView fitHeight="150.0" fitWidth="55.0" layoutX="509.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../assets/bookmark.png" />
         </image>
     </ImageView>
-    <ImageView fitHeight="112.0" fitWidth="457.0" layoutX="439.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fitHeight="112.0" fitWidth="457.0" layoutX="85.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../assets/icon_with_shadow.png" />
         </image>
     </ImageView>
-    <Text fx:id="welcomeText" fill="#3f4e4f" layoutX="430.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+    <Text fx:id="welcomeText" fill="#3f4e4f" layoutX="76.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
         <font>
             <Font name="JetBrains Mono ExtraBold" size="32.0" />
         </font>
     </Text>
-    <VBox layoutX="406.0" layoutY="427.0" prefHeight="47.0" prefWidth="174.0">
+    <VBox layoutX="52.0" layoutY="237.0" prefHeight="47.0" prefWidth="174.0">
         <children>
             <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="Library" textAlignment="CENTER" wrappingWidth="179.4000015258789">
                 <font>
@@ -121,6 +99,7 @@
             </Text>
         </children>
     </VBox>
+      <Line endX="111.0" layoutX="424.0" layoutY="194.0" startX="-92.0" stroke="#dcd7c9" />
 
 </children>
 </AnchorPane>

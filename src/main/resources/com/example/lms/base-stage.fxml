@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="1280.0" style="-fx-background-color: #2C3639;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.BaseStageController">
+   <children>
+      <ImageView blendMode="MULTIPLY" fitHeight="733.0" fitWidth="1280.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/lib-bg.png" />
+         </image>
+      </ImageView>
+      <BorderPane fx:id="topPane" layoutX="-4.0" layoutY="1.0" prefHeight="78.0" prefWidth="1289.0">
+         <bottom>
+            <Line endX="1154.5" opacity="0.8" startX="-132.12132263183594" startY="4.292893409729004" stroke="#2c3639" strokeWidth="2.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

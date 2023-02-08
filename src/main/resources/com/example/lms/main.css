@@ -56,3 +56,27 @@
 #welcomeText {
     /*-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 15, 0.15, 0, 0);*/
 }
+
+/*
+.Rounded_Rectangle_1 {
+  background-color: rgb(209, 65, 63);
+  box-shadow: 0px 7px 3.7px 1.3px rgba(0, 0, 0, 0.17);
+  position: absolute;
+  left: 746px;
+  top: 464px;
+  width: 105px;
+  height: 30px;
+  z-index: 8;
+} */
+
+.login_square {
+  background-image: -moz-linear-gradient( 90deg, rgb(63,67,79) 0%, rgb(44,54,57) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(63,67,79) 0%, rgb(44,54,57) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(63,67,79) 0%, rgb(44,54,57) 100%);
+  position: absolute;
+  left: 314px;
+  top: 176px;
+  width: 573px;
+  height: 357px;
+  z-index: 4;
+}
