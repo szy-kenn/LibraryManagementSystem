@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDrawer?>
-<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -13,155 +16,404 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.95" pickOnBounds="false" prefHeight="648.0" prefWidth="1280.0" style="-fx-background-color: &quot;2c3639&quot;;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.HomeController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.95" pickOnBounds="false" prefHeight="648.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.HomeController">
    <children>
-      <AnchorPane layoutX="125.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="268.0">
-         <children>
-            <Rectangle height="83.0" stroke="BLACK" strokeType="INSIDE" width="268.0">
-               <effect>
-                  <DropShadow offsetY="5.0" radius="8.25" spread="0.2" width="14.0" />
-               </effect>
-               <fill>
-                  <LinearGradient endX="1.0" endY="0.5971563981042654" startX="0.09478672985781991">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9607843160629272" green="0.8588235378265381" blue="0.4588235318660736" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.8301108479499817" blue="0.3110380172729492" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9725490212440491" green="0.9490196108818054" blue="0.5098039507865906" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e4f" height="62.0" layoutX="11.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
-            <JFXTextArea editable="false" focusTraversable="false" layoutX="31.0" layoutY="11.0" mouseTransparent="true" prefHeight="62.0" prefWidth="161.0" text="TODAY'S&#10;USERS:" wrapText="true">
-               <font>
-                  <Font name="JetBrains Mono Medium" size="18.0" />
-               </font>
-            </JFXTextArea>
-            <Text fill="#3f4e4f" layoutX="186.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="82.0">
-               <font>
-                  <Font name="JetBrains Mono ExtraBold" size="38.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="406.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="268.0">
-         <children>
-            <Rectangle height="83.0" stroke="BLACK" strokeType="INSIDE" width="268.0">
-               <effect>
-                  <DropShadow offsetY="5.0" radius="8.25" spread="0.2" width="14.0" />
-               </effect>
-               <fill>
-                  <LinearGradient endX="1.0" endY="0.5971563981042654" startX="0.09478672985781991">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9607843160629272" green="0.8588235378265381" blue="0.4588235318660736" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.8301108479499817" blue="0.3110380172729492" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9725490212440491" green="0.9490196108818054" blue="0.5098039507865906" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e4f" height="62.0" layoutX="11.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
-            <JFXTextArea editable="false" focusTraversable="false" layoutX="31.0" layoutY="11.0" mouseTransparent="true" prefHeight="62.0" prefWidth="161.0" text="TOTAL&#10;STUDENTS:">
-               <font>
-                  <Font name="JetBrains Mono Medium" size="18.0" />
-               </font>
-            </JFXTextArea>
-            <Text fill="#3f4e4f" layoutX="192.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40" textAlignment="CENTER" wrappingWidth="76.0">
-               <font>
-                  <Font name="JetBrains Mono ExtraBold" size="38.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="686.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="268.0">
-         <children>
-            <Rectangle height="83.0" stroke="BLACK" strokeType="INSIDE" width="268.0">
-               <effect>
-                  <DropShadow offsetY="5.0" radius="8.25" spread="0.2" width="14.0" />
-               </effect>
-               <fill>
-                  <LinearGradient endX="1.0" endY="0.5971563981042654" startX="0.09478672985781991">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.9607843160629272" green="0.8588235378265381" blue="0.4588235318660736" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.006711409395973154">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.8301108479499817" blue="0.3110380172729492" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9725490212440491" green="0.9490196108818054" blue="0.5098039507865906" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4e4f" height="62.0" layoutX="11.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
-            <JFXTextArea editable="false" focusTraversable="false" layoutX="31.0" layoutY="11.0" mouseTransparent="true" prefHeight="62.0" prefWidth="161.0" text="BOOKS&#10;BORROWED:" wrapText="true">
-               <font>
-                  <Font name="JetBrains Mono Medium" size="18.0" />
-               </font>
-            </JFXTextArea>
-            <Text fill="#3f4e4f" layoutX="192.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="83" textAlignment="CENTER" wrappingWidth="76.0">
-               <font>
-                  <Font name="JetBrains Mono ExtraBold" size="38.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" miniDrawerSize="0.0" overLayVisible="false" prefHeight="648.0" prefWidth="209.0" />
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="91.0" style="-fx-background-color: white;">
          <children>
-            <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="29.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="27.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/add-book.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="70.0" fitWidth="62.0" layoutX="19.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="70.0" fitWidth="62.0" layoutX="17.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/add-user.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="24.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="22.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/list-of-users.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="36.0" fitWidth="62.0" layoutX="14.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="36.0" fitWidth="62.0" layoutX="12.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/read-book.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="113.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="242.0" />
+      <Text fill="#2c3639" layoutX="123.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODAY'S USERS:" wrappingWidth="142.13671875">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="14.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="375.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="242.0" />
+      <Text fill="#2c3639" layoutX="385.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL MEMBERS:" wrappingWidth="142.13671875">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="14.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="640.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="242.0" />
+      <Text fill="#2c3639" layoutX="650.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOKS BORROWED:" wrappingWidth="142.13671875">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="14.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#c3c8c6" height="407.0" layoutX="903.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="351.0" />
+      <ScrollPane fitToWidth="true" layoutX="938.0" layoutY="97.0" prefHeight="307.0" prefWidth="316.0" style="-fx-background-color: #c2c8c6;">
+         <content>
+            <AnchorPane prefHeight="547.0" prefWidth="269.0" style="-fx-background-color: #c2c8c6;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text id="title" fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text id="author" fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text id="title" fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULTT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text id="author" fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="266.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/book-cover.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                                       <color>
+                                          <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#2c3639" layoutX="90.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#2f4e4f" layoutX="90.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Rectangle height="72.0" layoutX="903.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="351.0">
+         <effect>
+            <DropShadow height="34.15" offsetY="9.0" radius="8.0375" width="0.0">
+               <color>
+                  <Color red="0.5131579041481018" green="0.503654956817627" blue="0.503654956817627" />
+               </color>
+            </DropShadow>
+         </effect>
+         <fill>
+            <LinearGradient endX="0.17061611374407581" endY="0.8293838862559242" startX="0.17061611374407584" startY="0.02369668246445497">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5095029473304749" green="0.5394737124443054" blue="0.529483437538147" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.5095029473304749" green="0.5394737124443054" blue="0.529483437538147" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7607843279838562" green="0.7843137383460999" blue="0.7764706015586853" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="#2c3639" layoutX="936.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOP BOOKS">
+         <font>
+            <Font name="Krona One" size="26.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="113.0" layoutY="83.0" prefHeight="342.0" prefWidth="769.0">
+         <children>
+            <ScrollPane prefHeight="342.0" prefWidth="769.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="767.0">
+                     <children>
+                        <ImageView fitHeight="284.0" fitWidth="216.0" layoutX="20.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/book-cover.jpg" />
+                           </image>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" offsetY="8.0" radius="12.25" width="30.0">
+                                 <color>
+                                    <Color red="0.32894736528396606" green="0.31676414608955383" blue="0.31676414608955383" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" miniDrawerSize="0.0" overLayVisible="false" prefHeight="648.0" prefWidth="209.0" />
    </children>
 </AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="borrowBookMainPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.BorrowBook">
+   <children>
+      <AnchorPane opacity="0.9" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c2c8c6; -fx-border-color: black; -fx-border-width: 2; -fx-background-radius: 10;">
+         <children>
+            <VBox layoutX="279.0" layoutY="34.0" prefHeight="221.0" prefWidth="308.0" spacing="10.0">
+               <children>
+                  <Text fx:id="borrowBookTitleText" strokeType="OUTSIDE" strokeWidth="0.0" text="TITLE" wrappingWidth="302.9453125">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="28.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="borrowBookAuthorText" strokeType="OUTSIDE" strokeWidth="0.0" text="AUTHOR" wrappingWidth="187.015625" />
+                  <DatePicker />
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <ImageView fx:id="borrowBookCover" fitHeight="353.0" fitWidth="238.0" layoutX="24.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

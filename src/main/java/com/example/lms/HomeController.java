@@ -1,20 +1,25 @@
 package com.example.lms;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -31,9 +36,10 @@ public class HomeController {
 
 
     public void initialize() throws IOException {
+        mainPane.getStylesheets().add(Objects.requireNonNull(getClass().getResource("scrollbar.css")).toExternalForm());
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("base-stage.fxml")));
         AnchorPane homeTopPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home-topbar.fxml")));
-
+        AnchorPane book = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("book.fxml")));
         Stage stage = (Stage) Stage.getWindows().get(0);
         double height = stage.getHeight();
         double width = stage.getWidth();
@@ -67,8 +73,32 @@ public class HomeController {
                 }
         });
 
-        mainPane.getChildren().addAll(hamburger, homeTopPane);
+        mainPane.getChildren().addAll(hamburger, homeTopPane, book);
         ((AnchorPane) root).getChildren().add(mainPane);
     }
 
+
+    @FXML
+    private void borrowButtonClicked(ActionEvent event) throws IOException {
+        JFXButton buttonClicked = (JFXButton)event.getSource();
+        AnchorPane buttonParent = (AnchorPane) buttonClicked.getParent();
+        String bookTitle = null;
+        String bookAuthor = null;
+        for (Node node: buttonParent.getChildren()) {
+            if (node.getId() != null) {
+                if (node.getId().equalsIgnoreCase("author")) {
+                    bookAuthor = ((Text) node).getText();
+                } else if (node.getId().equalsIgnoreCase("title")) {
+                    bookTitle = ((Text) node).getText();
+                }
+            }
+        }
+        assert bookTitle != null;
+
+        BorrowBook.setBookTitle(bookTitle);
+        BorrowBook.setBookAuthor(bookAuthor);
+        AnchorPane borrowBookPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("borrow-book.fxml")));
+        mainPane.getChildren().add(borrowBookPane);
+        System.out.println(bookTitle + bookAuthor);
+    }
 }

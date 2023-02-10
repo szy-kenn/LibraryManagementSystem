@@ -10,7 +10,7 @@ public class HomeTopBar {
 
     public void initialize() {
 
-        searchBar.setLayoutX(852);
+        searchBar.setLayoutX(92);
         searchBar.setLayoutY(-58);
 
     }
