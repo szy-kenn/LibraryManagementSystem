@@ -69,7 +69,7 @@
   z-index: 8;
 } */
 
-.login_square {
+/*.login_square {
   background-image: -moz-linear-gradient( 90deg, rgb(63,67,79) 0%, rgb(44,54,57) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(63,67,79) 0%, rgb(44,54,57) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(63,67,79) 0%, rgb(44,54,57) 100%);
@@ -79,4 +79,4 @@
   width: 573px;
   height: 357px;
   z-index: 4;
-}
+}*/

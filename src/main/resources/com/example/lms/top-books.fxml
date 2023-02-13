@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="topBooksPane" prefHeight="547.0" prefWidth="269.0" style="-fx-background-color: #c2c8c6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-cover.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="9.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text id="title" fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="THE FAULT IN OUR STARS" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="author" fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="John Green" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/anne-of-green-gables.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text id="title" fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="ANNE OF GREEN GABLES" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="author" fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="L.M. Montgomery" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/to-all-the-boys-i've-loved-before.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="TO ALL THE BOYS I'VE LOVED BEFORE" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenny Han" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/harry-potter-and-the-sorcerer's-stone.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="HARRY POTTER AND THE SORCERER'S STONE" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="J.K. Rowling" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/the-da-vinci-code.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="THE DA VINCI CODE" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Dan Brown" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/the-hobbit.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="THE HOBBIT" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="J. R. R. Tolkien" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/the-little-prince.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="THE LITTLE PRINCE" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Antoine de Saint-Exupéry" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/howl's-moving-castle.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="HOWL'S MOVING CASTLE" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Diana Wynne Jones" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/alice's-adventure-in-wonderland.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="ALICE'S ADVENTURE IN WONDERLAND" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Lewis Carroll" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="116.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/book-covers/where-the-crawdads-sing.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="5.0" offsetY="5.0" radius="8.5">
+                           <color>
+                              <Color red="0.6578947305679321" green="0.6304824352264404" blue="0.6304824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <VBox layoutX="90.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0">
+                     <children>
+                        <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE THE CRAWDADS SING" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2f4e4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Delia Owens" wrappingWidth="162.3984375">
+                           <font>
+                              <Font name="JetBrains Mono ExtraBold" size="10.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

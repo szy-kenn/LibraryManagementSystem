@@ -1,33 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="borrowBookMainPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.BorrowBook">
+<AnchorPane fx:id="borrowBookMainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.BorrowBookController">
    <children>
-      <AnchorPane opacity="0.9" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c2c8c6; -fx-border-color: black; -fx-border-width: 2; -fx-background-radius: 10;">
+      <AnchorPane prefHeight="402.0" prefWidth="646.0" style="-fx-background-color: #c2c8c6;">
          <children>
-            <VBox layoutX="279.0" layoutY="34.0" prefHeight="221.0" prefWidth="308.0" spacing="10.0">
+            <Rectangle height="44.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="646.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.12353800982236862" green="0.15102338790893555" blue="0.15789473056793213" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.24705882370471954" green="0.25882354378700256" blue="0.30980393290519714" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <AnchorPane prefHeight="43.0" prefWidth="451.0">
                <children>
-                  <Text fx:id="borrowBookTitleText" strokeType="OUTSIDE" strokeWidth="0.0" text="TITLE" wrappingWidth="302.9453125">
+                  <Text fill="#c5a513" layoutX="65.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIBRARY MANAGEMENT SYSTEM SLIP">
                      <font>
-                        <Font name="JetBrains Mono ExtraBold" size="28.0" />
+                        <Font name="JetBrains Mono ExtraBold" size="18.0" />
                      </font>
                   </Text>
-                  <Text fx:id="borrowBookAuthorText" strokeType="OUTSIDE" strokeWidth="0.0" text="AUTHOR" wrappingWidth="187.015625" />
-                  <DatePicker />
+                  <ImageView fitHeight="44.0" fitWidth="67.0" layoutX="11.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="bookInfoVBox" layoutX="290.0" layoutY="81.0" prefHeight="62.0" prefWidth="194.0">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="308.0" spacing="10.0">
+                     <children>
+                        <StackPane fx:id="bookInfoStackPane" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="318.0">
+                           <children>
+                              <Rectangle fx:id="bookTitleBackground" arcHeight="5.0" arcWidth="5.0" height="44.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="317.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.1725490242242813" green="0.21176470816135406" blue="0.2235294133424759" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.006711409395973154">
+                                             <color>
+                                                <Color red="0.1725490242242813" green="0.21176470816135406" blue="0.2235294133424759" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.24705882370471954" green="0.30588236451148987" blue="0.30980393290519714" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill></Rectangle>
+                              <Text fx:id="borrowBookTitleText" fill="#c2c8c6" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Title" wrappingWidth="312.6666717529297" StackPane.alignment="CENTER_LEFT">
+                                 <font>
+                                    <Font name="JetBrains Mono NL ExtraBold" size="22.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="5.0" />
+                                 </StackPane.margin>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <Text fx:id="borrowBookAuthorText" fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Author">
+                     <font>
+                        <Font name="JetBrains Mono Medium" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="27.0" prefWidth="308.0" spacing="10.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
                </children>
             </VBox>
+            <VBox layoutX="290.0" layoutY="157.0" prefHeight="187.0" prefWidth="308.0" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="308.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/date-now.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                           <children>
+                              <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Borrowed:">
+                                 <font>
+                                    <Font name="JetBrains Mono SemiBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="dateBorrowedText" fill="#c72c41" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <font>
+                                    <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="308.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/date-returned.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                           <children>
+                              <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="To Be Returned on:">
+                                 <font>
+                                    <Font name="JetBrains Mono SemiBold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <DatePicker fx:id="datePicker" onAction="#getDate" prefHeight="35.0" prefWidth="140.0" style="-fx-focus-color: transparent;" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="245.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../assets/number-of-days.png" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrowing the book for:">
+                                       <font>
+                                          <Font name="JetBrains Mono SemiBold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="daysBeforeReturn" fill="#c72c41" strokeType="OUTSIDE" strokeWidth="0.0" text="1 day(s)">
+                                       <font>
+                                          <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="3.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="245.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../assets/stock-icon.png" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <Text fill="#2c3639" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock:">
+                                       <font>
+                                          <Font name="JetBrains Mono SemiBold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="stockNumber" fill="#c72c41" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font name="JetBrains Mono ExtraBold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="3.0" right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fx:id="borrowBookCoverBackground" fitHeight="358.0" fitWidth="254.0" layoutX="15.0" layoutY="44.0" pickOnBounds="true">
+               <effect>
+                  <MotionBlur radius="30.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="borrowBookCover" fitHeight="278.0" fitWidth="178.0" layoutX="46.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.06578947603702545" green="0.06396199017763138" blue="0.06396199017763138" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="519.0" layoutY="359.0" onAction="#confirmBorrowBook" prefHeight="32.0" prefWidth="86.0" style="-fx-background-color: #C72C41;" text="CONFIRM" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="14.0" />
+               </font></JFXButton>
+            <Line endX="226.0" layoutX="390.0" layoutY="150.0" startX="-100.0" />
+            <Label fx:id="errorMessage" alignment="CENTER" layoutX="283.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="236.0" text="Sorry, this book is currently out of stock." textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
          </children>
-         <effect>
-            <DropShadow />
-         </effect>
       </AnchorPane>
-      <ImageView fx:id="borrowBookCover" fitHeight="353.0" fitWidth="238.0" layoutX="24.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
    </children>
+   <effect>
+      <DropShadow />
+   </effect>
 </AnchorPane>

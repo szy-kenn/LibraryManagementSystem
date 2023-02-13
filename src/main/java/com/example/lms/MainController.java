@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
@@ -29,11 +30,13 @@ import java.util.Objects;
 
 
 public class MainController {
-    @FXML public AnchorPane mainPane;
+    @FXML private AnchorPane mainPane;
     @FXML
-    public TextField usernameField;
+    private TextField usernameField;
     @FXML
-    public PasswordField passwordField;
+    private PasswordField passwordField;
+    @FXML
+    private Label errorMessage;
     public LoginButton loginButton = new LoginButton();
 
     public MainController() throws IOException {
@@ -50,7 +53,8 @@ public class MainController {
                     if (!usernameField.getCharacters().isEmpty()) {
                         passwordField.requestFocus();
                     } else {
-                        System.out.println("No characters");
+                        errorMessage.setText("Please enter your username.");
+                        errorMessage.setVisible(true);
                     }
                 }
             }
@@ -63,11 +67,12 @@ public class MainController {
                         loginButton.requestFocus();
                         try {
                             getUsernamePassword();
-                        } catch (IOException e) {
+                        } catch (IOException | ClassNotFoundException e) {
                             throw new RuntimeException(e);
                         }
                     } else {
-                        System.out.println("No characters");
+                        errorMessage.setText("Please enter your password.");
+                        errorMessage.setVisible(true);
                     }
                 }
             }
@@ -77,7 +82,7 @@ public class MainController {
             public void handle(MouseEvent mouseEvent) {
                 try {
                     getUsernamePassword();
-                } catch (IOException e) {
+                } catch (IOException | ClassNotFoundException e) {
                     throw new RuntimeException(e);
                 }
             }
@@ -89,19 +94,30 @@ public class MainController {
     private void enterKeyLogin() {
 
     }
-    private void getUsernamePassword() throws IOException {
+    private void getUsernamePassword() throws IOException, ClassNotFoundException {
         String username = usernameField.getCharacters().toString();
         String password = passwordField.getCharacters().toString();
         System.out.println("USERNAME: " + username);
         System.out.println("PASSWORD: " + password);
 
-        // check if username and password is valid
-        if (username.equalsIgnoreCase("ken") && password.equalsIgnoreCase("ken")) {
-            changeScene();
-        } else {
-            System.out.println("wrong");
+        if (username.isBlank() || password.isBlank()) {
+            errorMessage.setText("Please enter your username and password.");
+            errorMessage.setVisible(true);
+            return;
         }
 
+        // check if username and password is valid
+        for (User user: Main.libraryArchive.getUsersList()) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                System.out.println("Loading user...");
+                Main.loadUser(username);
+                changeScene();
+                return;
+            }
+        }
+        System.out.println("Creating new user...");
+        Main.setUser(username, password);
+        changeScene();
     }
 
     private void changeScene() throws IOException {
@@ -112,7 +128,6 @@ public class MainController {
         Stage stage = (Stage) usernameField.getScene().getWindow();
 
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
         System.out.println("Changed scene");

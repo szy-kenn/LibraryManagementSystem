@@ -86,13 +86,15 @@ public class BaseStageController {
         exitIconStack.getChildren().addAll(exitRect, exitIcon);
         minimizeIconStack.getChildren().addAll(minimizeRect, minimizeIcon);
 
-        mainPane.getChildren().addAll(exitIconStack, minimizeIconStack);
+        StackPane newExitIconStack = setHoverProperty(exitIconStack);
+        StackPane newMinimizeIconStack = setHoverProperty(minimizeIconStack);
 
-        setHoverProperty(exitIconStack);
-        setHoverProperty(minimizeIconStack);
+        mainPane.getChildren().addAll(newExitIconStack, newMinimizeIconStack);
+
+
     }
 
-    private void setHoverProperty(StackPane stackPane) {
+    public static StackPane setHoverProperty(StackPane stackPane) {
         Rectangle rect = (Rectangle) stackPane.getChildren().get(0);
         FontIcon icon = (FontIcon) stackPane.getChildren().get(1);
         int size = icon.getIconSize();
@@ -114,7 +116,7 @@ public class BaseStageController {
                 icon.setIconColor(Paint.valueOf(GRAYISH_WHITE));
             }
         });
-
+        return stackPane;
     }
 
 }
