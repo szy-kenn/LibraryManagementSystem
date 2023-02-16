@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.lms.BookWidget"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="173.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.BookWidgetController">
+   <children>
+      <ImageView fx:id="bookCover" fitHeight="248.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/book-covers/alice's-adventures-in-wonderland.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="borrowButton" buttonType="RAISED" layoutX="48.0" layoutY="256.0" onAction="#onBorrowButtonClicked" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
 </AnchorPane>

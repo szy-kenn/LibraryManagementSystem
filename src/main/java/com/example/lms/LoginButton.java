@@ -4,6 +4,7 @@ import com.example.lms.Constants.*;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
@@ -16,10 +17,13 @@ import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextBoundsType;
 
 public class LoginButton extends StackPane{
+
+    Rectangle rectangle;
+    Text loginText;
     public LoginButton() {
 
-        Rectangle rectangle = new Rectangle();
-        Text loginText = new Text("LOGIN");
+        rectangle = new Rectangle();
+        loginText = new Text("LOGIN");
 
         DropShadow dsEffect = new DropShadow();
         dsEffect.setOffsetY(10);
@@ -81,5 +85,21 @@ public class LoginButton extends StackPane{
             }
         });
         this.getChildren().addAll(rectangle, loginText );
+    }
+
+    public Rectangle getRectangle() {
+        return rectangle;
+    }
+
+    public void setRectangle(Rectangle rectangle) {
+        this.rectangle = rectangle;
+    }
+
+    public Text getLoginText() {
+        return loginText;
+    }
+
+    public void setLoginText(String loginText) {
+        this.loginText.setText(loginText);
     }
 }

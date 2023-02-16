@@ -15,7 +15,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -235,7 +234,7 @@
                   </HBox>
                </children>
             </VBox>
-            <ImageView fx:id="borrowBookCoverBackground" fitHeight="358.0" fitWidth="254.0" layoutX="15.0" layoutY="44.0" pickOnBounds="true">
+            <ImageView fx:id="borrowBookCoverBackground" fitHeight="358.0" fitWidth="269.0" layoutY="44.0" pickOnBounds="true">
                <effect>
                   <MotionBlur radius="30.0" />
                </effect>
@@ -253,7 +252,6 @@
                <font>
                   <Font name="JetBrains Mono Regular" size="14.0" />
                </font></JFXButton>
-            <Line endX="226.0" layoutX="390.0" layoutY="150.0" startX="-100.0" />
             <Label fx:id="errorMessage" alignment="CENTER" layoutX="283.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="236.0" text="Sorry, this book is currently out of stock." textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />

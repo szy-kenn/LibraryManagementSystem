@@ -10,6 +10,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -97,25 +98,144 @@
       <effect>
          <DropShadow />
       </effect></AnchorPane>
-   <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="113.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="242.0" />
-   <Text fill="#2c3639" layoutX="123.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODAY'S USERS:" wrappingWidth="142.13671875">
+   <ScrollPane fitToHeight="true" focusTraversable="false" layoutX="114.0" layoutY="444.0" prefHeight="191.0" prefWidth="1153.0" style="-fx-background-color: transparent;" stylesheets="@genres-scrollpane.css">
+     <content>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="2051.0">
+            <children>
+               <HBox prefHeight="188.0" prefWidth="1142.0" spacing="10.0">
+                  <children>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="kids" fx:id="kidsSection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/kids.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="romance" fx:id="romanceSection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/romance.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="fantasy" fx:id="fantasySection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/fantasy.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="mystery" fx:id="mysterySection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/mystery.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="history" fx:id="historySection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/history.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="biography" fx:id="biographySection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/biography.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="nonfiction" fx:id="nonfictionSection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/nonfiction.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="young adult" fx:id="youngAdultSection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/young-adult.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
+                        <children>
+                           <ImageView id="horror" fx:id="horrorSection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../assets/genre-cover/horror.png" />
+                              </image>
+                              <effect>
+                                 <DropShadow />
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                  </children>
+               </HBox>
+            </children>
+         </AnchorPane>
+     </content>
+   </ScrollPane>
+   <Text fx:id="welcomeMessage" fill="WHITE" layoutX="119.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME!" wrappingWidth="289.5703125">
+      <font>
+         <Font name="JetBrains Mono ExtraBold" size="20.0" />
+      </font>
+   </Text>
+   <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="443.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
+   <Text fill="#2c3639" layoutX="452.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL MEMBERS:" wrappingWidth="142.13671875">
       <font>
          <Font name="JetBrains Mono ExtraBold" size="14.0" />
       </font>
    </Text>
-   <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="375.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="242.0" />
-   <Text fill="#2c3639" layoutX="385.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL MEMBERS:" wrappingWidth="142.13671875">
-      <font>
-         <Font name="JetBrains Mono ExtraBold" size="14.0" />
-      </font>
-   </Text>
-   <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="640.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="242.0" />
-   <Label fx:id="totalMembers" alignment="CENTER" layoutX="555.0" layoutY="22.0" prefHeight="33.0" prefWidth="62.0" text="0" textAlignment="CENTER" textFill="#b50808">
+   <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="673.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
+   <Label fx:id="totalMembers" alignment="CENTER" layoutX="590.0" layoutY="22.0" prefHeight="33.0" prefWidth="62.0" text="0" textAlignment="CENTER" textFill="#b50808">
       <font>
          <Font name="JetBrains Mono ExtraBold" size="22.0" />
       </font>
    </Label>
-   <Text fill="#2c3639" layoutX="650.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOKS BORROWED:" wrappingWidth="142.13671875">
+   <Text fill="#2c3639" layoutX="685.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOKS BORROWED:" wrappingWidth="142.13671875">
       <font>
          <Font name="JetBrains Mono ExtraBold" size="14.0" />
       </font>
@@ -160,7 +280,7 @@
                               </Text>
                            </children>
                         </VBox>
-                        <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                            <font>
                               <Font name="JetBrains Mono ExtraBold" size="12.0" />
                            </font>
@@ -178,7 +298,7 @@
                         </effect>
                         <Image url="@../../../assets/book-covers/the-silent-patient.jpg" />
                      </ImageView>
-                     <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                         <font>
                            <Font name="JetBrains Mono ExtraBold" size="12.0" />
                         </font>
@@ -221,7 +341,7 @@
                            </font>
                         </Text>
                      </VBox>
-                     <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                         <font>
                            <Font name="JetBrains Mono ExtraBold" size="12.0" />
                         </font>
@@ -252,7 +372,7 @@
                            </font>
                         </Text>
                      </VBox>
-                     <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                     <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                         <font>
                            <Font name="JetBrains Mono ExtraBold" size="12.0" />
                         </font>
@@ -282,7 +402,7 @@
                               </font>
                            </Text>
                         </VBox>
-                        <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                            <font>
                               <Font name="JetBrains Mono ExtraBold" size="12.0" />
                            </font>
@@ -317,7 +437,7 @@
                               </Text>
                            </children>
                         </VBox>
-                        <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                            <font>
                               <Font name="JetBrains Mono ExtraBold" size="12.0" />
                            </font>
@@ -352,7 +472,7 @@
                               </Text>
                            </children>
                         </VBox>
-                        <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                            <font>
                               <Font name="JetBrains Mono ExtraBold" size="12.0" />
                            </font>
@@ -387,7 +507,7 @@
                               </Text>
                            </children>
                         </VBox>
-                        <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                            <font>
                               <Font name="JetBrains Mono ExtraBold" size="12.0" />
                            </font>
@@ -422,7 +542,7 @@
                               </Text>
                            </children>
                         </VBox>
-                        <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                            <font>
                               <Font name="JetBrains Mono ExtraBold" size="12.0" />
                            </font>
@@ -457,7 +577,7 @@
                               </Text>
                            </children>
                         </VBox>
-                        <JFXButton buttonType="RAISED" ellipsisString="" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="90.0" layoutY="77.0" onAction="#borrowButtonClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #C72C41;" text="BORROW" textFill="WHITE">
                            <font>
                               <Font name="JetBrains Mono ExtraBold" size="12.0" />
                            </font>
@@ -502,30 +622,15 @@
          </LinearGradient>
       </fill>
    </Rectangle>
-   <Text fill="#2c3639" layoutX="936.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOP BOOKS">
+   <Text fill="#2c3639" layoutX="936.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FEATURED BOOKS">
       <font>
-         <Font name="Krona One" size="26.0" />
+         <Font name="Krona One" size="24.0" />
       </font>
    </Text>
-   <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" layoutX="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" miniDrawerSize="0.0" overLayVisible="false" prefHeight="648.0" prefWidth="209.0" />
-   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="91.0" style="-fx-background-color: white;">
+   <JFXDrawer id="drawer" fx:id="drawer" defaultDrawerSize="300.0" layoutX="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" miniDrawerSize="0.0" mouseTransparent="true" overLayVisible="false" prefHeight="72.0" prefWidth="176.0" />
+   <AnchorPane id="sidebarAnchorPane" fx:id="sidebarAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="91.0" style="-fx-background-color: white;">
       <children>
-         <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="27.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../assets/add-book.png" />
-            </image>
-         </ImageView>
-         <ImageView fitHeight="70.0" fitWidth="62.0" layoutX="17.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../assets/add-user.png" />
-            </image>
-         </ImageView>
-         <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="22.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../assets/list-of-users.png" />
-            </image>
-         </ImageView>
-         <ImageView fitHeight="36.0" fitWidth="62.0" layoutX="12.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="36.0" fitWidth="62.0" layoutX="15.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../../../assets/read-book.png" />
             </image>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="genresAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="1188.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.GenresController">
+   <children>
+      <AnchorPane fx:id="genreTextAnchorPane" layoutX="19.0" layoutY="6.0" prefHeight="87.0" prefWidth="1024.0" style="-fx-background-color: #2c3639;">
+         <effect>
+            <InnerShadow height="50.31" radius="17.3275" />
+         </effect>
+         <children>
+            <Text fx:id="genreText" fill="#c2c8c6" layoutX="19.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENRE" textAlignment="CENTER" wrappingWidth="993.8033752441406">
+               <font>
+                  <Font name="Krona One" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="checkBoxAnchorPane" layoutX="988.0" layoutY="84.0" prefHeight="532.0" prefWidth="161.0">
+         <children>
+            <VBox fx:id="VBoxCheckBox" layoutX="50.0" layoutY="3.0" opacity="0.9" prefHeight="534.0" prefWidth="141.0">
+               <children>
+                  <JFXCheckBox id="kids" fx:id="kids" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Kids" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="romance" fx:id="romance" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Romance" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="fantasy" fx:id="fantasy" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Fantasy" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="mystery" fx:id="mystery" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Mystery" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="history" fx:id="history" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="History" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="biography" fx:id="history1" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Biography" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="nonfiction" fx:id="history11" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Nonfiction" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="young adult" fx:id="history111" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Young Adult" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox id="horror" fx:id="history1111" checkedColor="#966844" contentDisplay="CENTER" focusTraversable="false" onAction="#checkBoxUpdate" prefHeight="45.0" prefWidth="145.0" text="Horror" textAlignment="CENTER" textFill="#c2c8c6" unCheckedColor="#c2c8c6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ScrollPane focusTraversable="false" layoutX="19.0" layoutY="90.0" prefHeight="551.0" prefWidth="1024.0" style="-fx-background-color: transparent;" stylesheets="@scrollbar.css">
+        <content>
+          <AnchorPane fx:id="scrollAnchorPane" prefHeight="549.0" prefWidth="1022.0" style="-fx-background-color: rgb(0, 0, 0, 0.2);">
+               <children>
+                  <VBox fx:id="vboxBooks" prefHeight="547.0" prefWidth="1008.0" spacing="5.0">
+                     <padding>
+                        <Insets bottom="10.0" left="35.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

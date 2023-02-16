@@ -60,7 +60,7 @@
             <Font name="JetBrains Mono NL ExtraBold" size="12.0" />
         </font>
     </Text>
-    <Text fx:id="createAccount" fill="WHITE" layoutX="327.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or Create an Account now!" wrappingWidth="246.0">
+    <Text fx:id="createAccount" fill="WHITE" layoutX="327.0" layoutY="117.0" onMouseClicked="#createAnAccountClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="or Create an Account now!" wrappingWidth="182.0">
         <font>
             <Font name="JetBrains Mono NL ExtraBold" size="12.0" />
         </font>

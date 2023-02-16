@@ -32,6 +32,8 @@ public class BorrowBookController {
     private LocalDate dateNow = LocalDate.now();
     private LocalDate dateToReturn = LocalDate.ofYearDay(dateNow.getYear(), dateNow.getDayOfYear()+1);
 
+    private AnchorPane borrowBookConfirm;
+    private AnchorPane mainPane;
     @FXML
     private AnchorPane borrowBookMainPane;
     @FXML
@@ -106,7 +108,7 @@ public class BorrowBookController {
 
         if (bookTitle.length() > 24) {
             bookInfoVBox.setLayoutY(bookInfoVBox.getLayoutY() - 15);
-            borrowBookTitleText.setStyle("-fx-font-size: 20px;");
+            borrowBookTitleText.setStyle("-fx-font-size: 16px;");
         }
         bookTitleBackground.setWidth(borrowBookTitleText.getLayoutBounds().getWidth() + 10);
         bookTitleBackground.setHeight(borrowBookTitleText.getLayoutBounds().getHeight());
@@ -120,7 +122,7 @@ public class BorrowBookController {
         String dateBorrowed = dateNow.getDayOfWeek() + " " + dateNow.getDayOfMonth() + " " + dateNow.getMonth() + " " + dateNow.getYear();
         dateBorrowedText.setText(dateBorrowed);
     }
-    public String getImageName(String bookTitle) {
+    public static String getImageName(String bookTitle) {
         StringBuilder newString = new StringBuilder();
         for (Character c : bookTitle.toCharArray()) {
             if (c.toString().isBlank()) {
@@ -161,15 +163,19 @@ public class BorrowBookController {
         }
         BorrowedBook book = new BorrowedBook(bookTitle, bookAuthor, genre, dateNow, dateToReturn, false);
         Main.libraryArchive.borrowBook(Main.user, book);
-        AnchorPane mainPane = (AnchorPane)(((JFXButton)actionEvent.getSource()).getParent()).getParent().getParent();
+        mainPane = (AnchorPane)(((JFXButton)actionEvent.getSource()).getParent()).getParent().getParent();
         mainPane.getChildren().remove(borrowBookMainPane);
 
-        AnchorPane borrowBookConfirm = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("borrow-book-confirm.fxml")));
+        borrowBookConfirm = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("borrow-book-confirm.fxml")));
         borrowBookConfirm.setLayoutX(mainPane.getPrefWidth() / 2 - borrowBookConfirm.getPrefWidth() / 2);
         borrowBookConfirm.setLayoutY(mainPane.getPrefHeight() / 2 - borrowBookConfirm.getPrefHeight() / 2 + 50);
 
         Label booksBorrowedCount = (Label) mainPane.lookup("#booksBorrowedCount");
-        booksBorrowedCount.setText(String.valueOf(Main.libraryArchive.getBooksBorrowedCount()));
+        try {
+            booksBorrowedCount.setText(String.valueOf(Main.libraryArchive.getBooksBorrowedCount()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         mainPane.getChildren().add(borrowBookConfirm);
     }
 

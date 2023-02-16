@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="209.0" spacing="10.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.Sidebar">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="209.0" spacing="10.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lms.Sidebar">
    <children>
-      <JFXButton prefHeight="70.0" prefWidth="209.0" text="ADD MEMBER" textAlignment="CENTER">
-         <font>
-            <Font name="JetBrains Mono NL SemiBold" size="14.0" />
-         </font></JFXButton>
-      <JFXButton prefHeight="70.0" prefWidth="209.0" text="ADD BOOKS" textAlignment="CENTER">
-         <font>
-            <Font name="JetBrains Mono NL SemiBold" size="14.0" />
-         </font></JFXButton>
-      <JFXButton prefHeight="70.0" prefWidth="209.0" text="SEE ALL MEMBERS" textAlignment="CENTER">
-         <font>
-            <Font name="JetBrains Mono NL SemiBold" size="14.0" />
-         </font></JFXButton>
       <JFXButton onAction="#seeArchive" prefHeight="70.0" prefWidth="209.0" text="CHECK BORROWED BOOKS" textAlignment="CENTER">
          <font>
             <Font name="JetBrains Mono NL SemiBold" size="14.0" />
          </font></JFXButton>
    </children>
-   <padding>
-      <Insets top="335.0" />
-   </padding>
 </VBox>

@@ -17,6 +17,8 @@ public class LibraryArchive implements Serializable {
 
     public int booksBorrowedCount;
 
+    Random random = new Random();
+
     public List<User> getUsersList() {
         return usersList;
     }
@@ -26,34 +28,72 @@ public class LibraryArchive implements Serializable {
     public LibraryArchive () {
         usersList = new ArrayList<>();
         booksList = new HashMap<>();
-        Book BOOK001 = new Book("THE FAULT IN OUR STARS", "JOHN GREEN", "ROMANCE");
-        Book BOOK002 = new Book("THE SILENT PATIENT", "ALEX MICHAELIDES", "MYSTERY");
-        Book BOOK003 = new Book("ALICE'S ADVENTURES IN WONDERLAND", "LEWIS CARROLL", "KIDS");
-        Book BOOK004 = new Book("ANNE OF GREEN GABLES", "L.M. MONTGOMERY", "KIDS");
-        Book BOOK005 = new Book("FIFTY SHADES OF GREY", "E.L. JAMES", "ROMANCE");
-        Book BOOK006 = new Book("HARRY POTTER AND THE SORCERER'S STONE", "J.K. ROWLING", "FANTASY");
-        Book BOOK007 = new Book("HOWL'S MOVING CASTLE", "DIANA WYNNE JONES", "FANTASY");
-        Book BOOK008 = new Book("THE DA VINCI CODE", "DAN BROWN", "MYSTERY");
-        Book BOOK009 = new Book("THE HOBBIT", "J.R.R. TOLKIEN", "FANTASY");
-        Book BOOK010 = new Book("THE LITTLE PRINCE", "ANTOINE DE SAINT-EXUPÉRY", "KIDS");
-        Book BOOK011 = new Book("TO ALL THE BOYS I'VE LOVED BEFORE", "JENNY HAN", "ROMANCE");
-        Book BOOK012 = new Book("WHERE THE CRAWDADS SING", "DELIA OWENS", "MYSTERY");
-        Book BOOK013 = new Book("BRIDGE TO TERABITHIA", "KATHERINE PATERSON", "KIDS");
-        Book BOOK014 = new Book("CHARLIE AND THE CHOCOLATE FACTORY", "ROALD DAHL", "KIDS");
-        Book BOOK015 = new Book("THE SONG OF ACHILLES", "MADELINE MILLER", "ROMANCE");
+        List<Book> books = new ArrayList<>();
+        books.add(new Book("THE FAULT IN OUR STARS", "JOHN GREEN", "YOUNG ADULT"));
+        books.add(new Book("THE SILENT PATIENT", "ALEX MICHAELIDES", "MYSTERY"));
+        books.add(new Book("ALICE'S ADVENTURES IN WONDERLAND", "LEWIS CARROLL", "KIDS"));
+        books.add(new Book("ANNE OF GREEN GABLES", "L.M. MONTGOMERY", "KIDS"));
+        books.add(new Book("FIFTY SHADES OF GREY", "E.L. JAMES", "ROMANCE"));
+        books.add(new Book("HARRY POTTER AND THE SORCERER'S STONE", "J.K. ROWLING", "FANTASY"));
+        books.add(new Book("HOWL'S MOVING CASTLE", "DIANA WYNNE JONES", "FANTASY"));
+        books.add(new Book("THE DA VINCI CODE", "DAN BROWN", "MYSTERY"));
+        books.add(new Book("THE HOBBIT", "J.R.R. TOLKIEN", "FANTASY"));
+        books.add(new Book("THE LITTLE PRINCE", "ANTOINE DE SAINT-EXUPÉRY", "KIDS"));
+        books.add(new Book("TO ALL THE BOYS I'VE LOVED BEFORE", "JENNY HAN", "ROMANCE"));
+        books.add(new Book("WHERE THE CRAWDADS SING", "DELIA OWENS", "MYSTERY"));
+        books.add(new Book("BRIDGE TO TERABITHIA", "KATHERINE PATERSON", "KIDS"));
+        books.add(new Book("CHARLIE AND THE CHOCOLATE FACTORY", "ROALD DAHL", "KIDS"));
+        books.add(new Book("THE SONG OF ACHILLES", "MADELINE MILLER", "ROMANCE"));
+        books.add(new Book("PRIDE & PREJUDICE", "JANE AUSTEN", "ROMANCE"));
+        books.add(new Book("THE MAID A NOVEL", "NITA PROSE", "MYSTERY"));
+        books.add(new Book("ONE OF US IS LYING", "KAREN M. MCMANUS", "MYSTERY"));
+        books.add(new Book("THE SEVEN DEATHS OF EVELYN HARDCASTLE", "STUART TURTON", "MYSTERY"));
+        books.add(new Book("A GAME OF THRONES", "GEORGE. R. R. MARTIN", "FANTASY"));
+        books.add(new Book("THE LION THE WITCH AND THE WARDROBE", "C.S. LEWIS", "FANTASY"));
+        books.add(new Book("THE DIARY OF A YOUNG GIRL", "ANNE FRANK", "HISTORY"));
+        books.add(new Book("THE ART OF WAR", "SUN TZU", "HISTORY"));
+        books.add(new Book("SAPIENS A BRIEF HISTORY OF HUMANKIND", "YUVAL NOAH HARARI", "NONFICTION"));
+        books.add(new Book("EUROPE A HISTORY", "NORMAN DAVIES", "HISTORY"));
+        books.add(new Book("THE RAPE OF NANKING", "IRIS CHANG", "HISTORY"));
+        books.add(new Book("THE GIRL ON THE TRAIN", "PAULA HAWKINS", "MYSTERY"));
+        books.add(new Book("VERITY", "COLLEEN HOOVER", "MYSTERY"));
+        books.add(new Book("THE POSTMAN ALWAYS RINGS TWICE", "JAMES M. CAIN", "MYSTERY"));
+        books.add(new Book("GONE GIRL", "GILLIAN FLYNN", "MYSTERY"));
+        books.add(new Book("THE NOTEBOOK", "NICHOLAS SPARKS", "ROMANCE"));
+        books.add(new Book("THE DUKE AND I", "JULIA QUINN", "ROMANCE"));
+        books.add(new Book("LOVE ON THE BRAIN", "ALI HAZELWOOD", "ROMANCE"));
+        books.add(new Book("I LOVE YOU TO THE MOON AND BACK", "TIM WARNES", "KIDS"));
+        books.add(new Book("HARRY POTTER AND THE CHAMBER OF SECRETS", "J.K. ROWLING", "FANTASY"));
+        books.add(new Book("HARRY POTTER AND THE PRISONER OF AZKABAN", "J.K. ROWLING", "FANTASY"));
+        books.add(new Book("HARRY POTTER AND THE GOBLET OF FIRE", "J.K. ROWLING", "FANTASY"));
+        books.add(new Book("HARRY POTTER AND THE ORDER OF THE PHOENIX", "J.K. ROWLING", "FANTASY"));
+        books.add(new Book("HARRY POTTER AND THE HALF BLOOD PRINCE", "J.K. ROWLING", "FANTASY"));
+        books.add(new Book("HARRY POTTER AND THE DEATHLY HALLOWS", "J.K. ROWLING", "FANTASY"));
+        books.add(new Book("THE BROMANCE BOOK CLUB", "LYSSA KAY ADAMS", "ROMANCE"));
+        books.add(new Book("THE ART OF LOVING", "ERICH FROMM", "NONFICTION"));
+        books.add(new Book("TUESDAYS WITH MORRIE", "MITCH ALBOM", "BIOGRAPHY"));
+        books.add(new Book("THEY BOTH DIE AT THE END", "ADAM SILVERA", "YOUNG ADULT"));
+        books.add(new Book("WHAT IF IT'S US", "BECKY ALBERTALLI & ADAM SILVERA", "ROMANCE"));
+        books.add(new Book("BEHIND HER EYES", "SARAH PINBOROUGH", "MYSTERY"));
+        books.add(new Book("LAYLA", "COLLEEN HOOVER", "MYSTERY"));
+        books.add(new Book("PEDRO'S YOYOS", "ROBERTO PENAS", "NONFICTION"));
+        books.add(new Book("EINSTEIN HIS LIFE AND UNIVERSE", "WALTER ISAACSON", "BIOGRAPHY"));
+        books.add(new Book("ALAN TURING THE ENIGMA", "ANDREW HODGES", "BIOGRAPHY"));
+        books.add(new Book("THE OMNIVORE'S DILEMMA", "MICHAEL POLLAN", "NONFICTION"));
+        books.add(new Book("A BRIEF HISTORY OF TIME", "STEPHEN HAWKING", "NONFICTION"));
+        books.add(new Book("THE HUNGER GAMES", "SUZANNE COLLINS", "YOUNG ADULT"));
+        books.add(new Book("A GOOD GIRL'S GUIDE TO MURDER", "HOLLY JACKSON", "YOUNG ADULT"));
+        books.add(new Book("IT'S KIND OF A FUNNY STORY", "NED VIZZINI", "YOUNG ADULT"));
+        books.add(new Book("DRACULA", "BRAM STOKER", "HORROR"));
+        books.add(new Book("BIRD BOX", "JOSH MALERMAN", "HORROR"));
+        books.add(new Book("IT", "STEPHEN KING", "HORROR"));
+        books.add(new Book("MEXICAN GOTHIC", "SILVIA MORENO-GARCIA", "HORROR"));
+        books.add(new Book("CORALINE", "NEILS GAIMAN", "HORROR"));
 
-        booksList.put(BOOK001, new ArrayList<>(Arrays.asList(5, 0)));
-        booksList.put(BOOK002, new ArrayList<>(Arrays.asList(4, 0)));
-        booksList.put(BOOK003, new ArrayList<>(Arrays.asList(3, 0)));
-        booksList.put(BOOK004, new ArrayList<>(Arrays.asList(6, 0)));
-        booksList.put(BOOK005, new ArrayList<>(Arrays.asList(2, 0)));
-        booksList.put(BOOK006, new ArrayList<>(Arrays.asList(10, 0)));
-        booksList.put(BOOK007, new ArrayList<>(Arrays.asList(8, 0)));
-        booksList.put(BOOK008, new ArrayList<>(Arrays.asList(16, 0)));
-        booksList.put(BOOK009, new ArrayList<>(Arrays.asList(7, 0)));
-        booksList.put(BOOK010, new ArrayList<>(Arrays.asList(2, 0)));
-        booksList.put(BOOK011, new ArrayList<>(Arrays.asList(10, 0)));
-        booksList.put(BOOK012, new ArrayList<>(Arrays.asList(9, 0)));
+        for (Book book : books) {
+            int randomNum = random.nextInt(1, 20);
+            booksList.put(book, new ArrayList<>(Arrays.asList(randomNum, 0)));
+        }
     }
 
     public int getTotalMemberCount() {
@@ -72,7 +112,7 @@ public class LibraryArchive implements Serializable {
     }
 
     public void addToArchive(Book book, int stock) {
-
+        booksList.put(book, new ArrayList<>(Arrays.asList(stock, 0)));
     }
 
     private void changeStock(Book book, int num) {
