@@ -226,7 +226,7 @@
    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="443.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
    <Text fill="#2c3639" layoutX="452.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL MEMBERS:" wrappingWidth="142.13671875">
       <font>
-         <Font name="JetBrains Mono ExtraBold" size="14.0" />
+         <Font name="JetBrains Mono ExtraBold" size="12.0" />
       </font>
    </Text>
    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#fdfeff" height="42.0" layoutX="673.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
@@ -237,7 +237,7 @@
    </Label>
    <Text fill="#2c3639" layoutX="685.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOKS BORROWED:" wrappingWidth="142.13671875">
       <font>
-         <Font name="JetBrains Mono ExtraBold" size="14.0" />
+         <Font name="JetBrains Mono ExtraBold" size="12.0" />
       </font>
    </Text>
    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#c3c8c6" height="407.0" layoutX="903.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="351.0" />

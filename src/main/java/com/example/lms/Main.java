@@ -51,18 +51,19 @@ public class Main extends Application {
         This specific file will hold ALL THE DATA that this program will produce, including
         the users lists, the available books, user's archive, borrowed books, etc.
          */
-        File f = new File(filepath + "/userdata/_LIBRARY_ARCHIVE_.txt");
+        File f = new File( "userdata/_LIBRARY_ARCHIVE_.txt");
         if (f.exists() && !f.isDirectory()) {
             System.out.println("Loading LibraryArchive File...");
             ObjectInputStream in = new ObjectInputStream(
-                    new FileInputStream(filepath + "/userdata/_LIBRARY_ARCHIVE_.txt")
+                    new FileInputStream("userdata/_LIBRARY_ARCHIVE_.txt")
             );
             libraryArchive = (LibraryArchive) in.readObject();
         } else {
+            System.out.println(filepath);
             System.out.println("Creating new LibraryArchive file...");
             libraryArchive = new LibraryArchive();
             ObjectOutputStream out = new ObjectOutputStream(
-                    new FileOutputStream(filepath + "/userdata/_LIBRARY_ARCHIVE_.txt"))
+                    new FileOutputStream( "userdata/_LIBRARY_ARCHIVE_.txt"))
                     ;
             out.writeObject(libraryArchive);
         }
