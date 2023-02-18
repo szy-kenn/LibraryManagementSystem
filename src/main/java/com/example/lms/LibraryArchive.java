@@ -50,11 +50,11 @@ public class LibraryArchive implements Serializable {
         books.add(new Book("THE SEVEN DEATHS OF EVELYN HARDCASTLE", "STUART TURTON", "MYSTERY"));
         books.add(new Book("A GAME OF THRONES", "GEORGE. R. R. MARTIN", "FANTASY"));
         books.add(new Book("THE LION THE WITCH AND THE WARDROBE", "C.S. LEWIS", "FANTASY"));
-        books.add(new Book("THE DIARY OF A YOUNG GIRL", "ANNE FRANK", "HISTORY"));
-        books.add(new Book("THE ART OF WAR", "SUN TZU", "HISTORY"));
+        books.add(new Book("THE DIARY OF A YOUNG GIRL", "ANNE FRANK", "BIOGRAPHY"));
+        books.add(new Book("THE ART OF WAR", "SUN TZU", "HISTORICAL"));
         books.add(new Book("SAPIENS A BRIEF HISTORY OF HUMANKIND", "YUVAL NOAH HARARI", "NONFICTION"));
-        books.add(new Book("EUROPE A HISTORY", "NORMAN DAVIES", "HISTORY"));
-        books.add(new Book("THE RAPE OF NANKING", "IRIS CHANG", "HISTORY"));
+        books.add(new Book("EUROPE A HISTORY", "NORMAN DAVIES", "HISTORICAL"));
+        books.add(new Book("THE RAPE OF NANKING", "IRIS CHANG", "HISTORICAL"));
         books.add(new Book("THE GIRL ON THE TRAIN", "PAULA HAWKINS", "MYSTERY"));
         books.add(new Book("VERITY", "COLLEEN HOOVER", "MYSTERY"));
         books.add(new Book("THE POSTMAN ALWAYS RINGS TWICE", "JAMES M. CAIN", "MYSTERY"));
@@ -89,6 +89,9 @@ public class LibraryArchive implements Serializable {
         books.add(new Book("IT", "STEPHEN KING", "HORROR"));
         books.add(new Book("MEXICAN GOTHIC", "SILVIA MORENO-GARCIA", "HORROR"));
         books.add(new Book("CORALINE", "NEILS GAIMAN", "HORROR"));
+        books.add(new Book("NOLI ME TANGERE", "JOSÉ RIZAL", "HISTORICAL"));
+        books.add(new Book("EL FILIBUSTERISMO", "JOSÉ RIZAL", "HISTORICAL"));
+        books.add(new Book("THE IMMORTAL LIFE OF HENRIETTA LACKS", "REBECCA SKLOOT", "BIOGRAPHY"));
 
         for (Book book : books) {
             int randomNum = random.nextInt(1, 20);

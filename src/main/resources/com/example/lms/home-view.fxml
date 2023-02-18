@@ -154,7 +154,7 @@
                      </VBox>
                      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="218.4" spacing="10.0">
                         <children>
-                           <ImageView id="history" fx:id="historySection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
+                           <ImageView id="historical" fx:id="historySection" fitHeight="166.0" fitWidth="220.0" onMouseClicked="#onGenreClick" pickOnBounds="true" preserveRatio="true">
                               <image>
                                  <Image url="@../../../assets/genre-cover/history.png" />
                               </image>
