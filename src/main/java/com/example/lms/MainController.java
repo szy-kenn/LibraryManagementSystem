@@ -160,7 +160,8 @@ public class MainController {
         if (username.isBlank() || password.isBlank()) {
             errorMessage.setText("Please enter your username and password.");
             errorMessage.setVisible(true);
-            return;        }
+            return;
+        }
 
         // check if username is valid if creating an account
         if (switched) {
@@ -177,7 +178,7 @@ public class MainController {
                 errorMessage.setVisible(true);
                 return;
             } else {
-                for (User user: Main.libraryArchive.getUsersList()) {
+                for (User user : Main.libraryArchive.getUsersList()) {
                     if (user.getUsername().equals(username)) {
                         errorMessage.setText("Username is already taken.");
                         errorMessage.setVisible(true);
@@ -190,10 +191,8 @@ public class MainController {
             if (password.length() < 6) {
                 errorMessage.setText("Password is too short.");
                 errorMessage.setVisible(true);
-                return;
             } else {
                 int uppercase = 0;
-                int symbol = 0;
                 int digit = 0;
 
                 for (char letter : password.toCharArray()) {
@@ -206,45 +205,46 @@ public class MainController {
                             errorMessage.setText("Spaces are not allowed.");
                             errorMessage.setVisible(true);
                             return;
-                        } else {
-                            symbol++;
                         }
                     }
                 }
 
-                if (digit == 0 || symbol == 0 || uppercase == 0) {
-                    errorMessage.setText("Password must contain at least 1 digit, symbol, and uppercase letter");
+                if (digit == 0 || uppercase == 0) {
+                    errorMessage.setText("Password must contain at least 1 digit and an uppercase letter");
                     errorMessage.setVisible(true);
-                    return;
+                } else {
+                    Main.setUser(username, password);
+                    errorMessage.setText("Account created. Please log in.");
+                    errorMessage.setVisible(true);
+                    usernameField.clear();
+                    passwordField.clear();
+//                    changeScene();
                 }
-                Main.setUser(username, password);
-                changeScene();
+            }
+
+        } else {
+            // if logging in
+            // check if username and password is valid
+            boolean usernameFound = false;
+            for (User user : Main.libraryArchive.getUsersList()) {
+
+                if (user.getUsername().equals(username)) {
+                    usernameFound = true;
+                    if (user.getPassword().equals(password)) {
+                        Main.loadUser(username);
+                        changeScene();
+                        return;
+                    }
+                }
+            }
+            if (!usernameFound) {
+                errorMessage.setText("Account does not exist.");
+                errorMessage.setVisible(true);
                 return;
             }
-
-        }
-        // if logging in
-        // check if username and password is valid
-        boolean usernameFound = false;
-        for (User user: Main.libraryArchive.getUsersList()) {
-
-            if (user.getUsername().equals(username)) {
-                usernameFound = true;
-                if (user.getPassword().equals(password)) {
-                    Main.loadUser(username);
-                    changeScene();
-                    return;
-                }
-            }
-        }
-        if (!usernameFound) {
-            errorMessage.setText("Account does not exist.");
+            errorMessage.setText("Wrong username or password.");
             errorMessage.setVisible(true);
-            return;
         }
-        errorMessage.setText("Wrong username or password.");
-        errorMessage.setVisible(true);
-        return;
     }
 
     private void changeScene() throws IOException {

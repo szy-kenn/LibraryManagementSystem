@@ -192,7 +192,7 @@ public class LibraryArchive implements Serializable {
     }
     public void saveToFile() throws IOException {
         System.out.println("Saving...");
-        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("src/main/java/com/example/lms/userdata/_LIBRARY_ARCHIVE_.txt"));
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("userdata/_LIBRARY_ARCHIVE_.txt"));
         out.writeObject(this);
     }
 

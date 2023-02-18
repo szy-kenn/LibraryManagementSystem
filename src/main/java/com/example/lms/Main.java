@@ -20,7 +20,8 @@ public class Main extends Application {
 
     // instantiate the needed objects for the icon, design styles, and the static objects "user" and "libraryArchive"
     // that can be accessed by every class of this project
-    private final Image icon = new Image("C:\\Users\\PC\\Documents\\GitHub\\LibraryManagementSystem-CaseStudy\\src\\main\\resources\\assets\\logo.png");
+    String filepath = new File("").getAbsolutePath();
+//    private final Image icon = new Image(filepath + "/src/main/resources/assets/logo.png");
     private final String cssStyling = Objects.requireNonNull(getClass().getResource("main.css")).toExternalForm();
 
     public static User user;
@@ -34,7 +35,7 @@ public class Main extends Application {
         - makes the stage undecorated, meaning the upper bar that holds
             maximize, minimum, and close button will be removed
          */
-        stage.getIcons().add(icon);
+//        stage.getIcons().add(icon);
         stage.setResizable(false);
         stage.setTitle("Library Management System");
         stage.initStyle(StageStyle.UNDECORATED);
@@ -50,18 +51,18 @@ public class Main extends Application {
         This specific file will hold ALL THE DATA that this program will produce, including
         the users lists, the available books, user's archive, borrowed books, etc.
          */
-        File f = new File("userdata/_LIBRARY_ARCHIVE_.txt");
+        File f = new File(filepath + "/userdata/_LIBRARY_ARCHIVE_.txt");
         if (f.exists() && !f.isDirectory()) {
             System.out.println("Loading LibraryArchive File...");
             ObjectInputStream in = new ObjectInputStream(
-                    new FileInputStream("userdata/_LIBRARY_ARCHIVE_.txt")
+                    new FileInputStream(filepath + "/userdata/_LIBRARY_ARCHIVE_.txt")
             );
             libraryArchive = (LibraryArchive) in.readObject();
         } else {
             System.out.println("Creating new LibraryArchive file...");
             libraryArchive = new LibraryArchive();
             ObjectOutputStream out = new ObjectOutputStream(
-                    new FileOutputStream("userdata/_LIBRARY_ARCHIVE_.txt"))
+                    new FileOutputStream(filepath + "/userdata/_LIBRARY_ARCHIVE_.txt"))
                     ;
             out.writeObject(libraryArchive);
         }
