@@ -1,4 +1,5 @@
 <h1 align='center'><b>Library Management System</b></h1>
+<h3 align='center'><b>A Desktop Application Project for the course COMP 20083 - Object Oriented Programming from Polytechnic University of the Philippines.</b></h3>
 
 ### Overview
 
